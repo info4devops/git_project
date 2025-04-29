@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Hello from feature file
+=======
+New feature added!
+>>>>>>> 412a4b73ab7a52996bd922ae88483cf5a44aa2cb
