@@ -1,18 +1,11 @@
-# Use official Node.js base image
-FROM node:18
+# Use the official NGINX base image
+FROM nginx:latest
 
-# Set working directory
-WORKDIR /app
+# Copy custom configuration (optional)
+# COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy package.json and install dependencies
-COPY package*.json ./
-RUN npm install
+# Expose port 80
+EXPOSE 80
 
-# Copy app source code
-COPY . .
-
-# Expose the port your app runs on
-EXPOSE 3000
-
-# Start the application
-CMD ["node", "app.js"]
+# Start NGINX (default CMD in nginx image already does this)
+CMD ["nginx", "-g", "daemon off;"]
