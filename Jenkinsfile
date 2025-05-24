@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-    stage('CheckOut') {
-      steps { echo 'Building...' }
+    stage('Git Checkout') {
+      steps { echo 'Git Checkout...' }
     }
     
   }
